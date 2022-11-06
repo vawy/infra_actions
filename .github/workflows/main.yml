@@ -64,7 +64,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             # Выполняет pull образа с DockerHub
-            sudo docker pull mforcourses/infraactions
+            sudo docker pull mforcourses/infraactions:v1.06112022
             #остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 mforcourses/infraactions
+            sudo docker run --rm -d -p 5000:5000 mforcourses/infraactions:v1.06112022
